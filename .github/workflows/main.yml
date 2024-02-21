@@ -1,4 +1,4 @@
-name: Build and Test ASP.Net Core web API
+name: Build and Test ASP.Net Core web API CI and CD
 
 env:
   DOTNET_VERSION: '6.0.x'                 # set this to the .NET Core version to use
