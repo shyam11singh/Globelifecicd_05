@@ -39,9 +39,21 @@ jobs:
         run: | 
           cd out;
           zip -r ../publish.zip *
+ 
 
       - name : Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: artifactfile
           path: out
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-north-1
+
+      - name: update function code directly
+      # AWS lambda name - GLife_05
+        run: aws lambda update-function-code --function-name GLife_05 --region eu-north-1 --zip-file fileb://publish.zip
