@@ -1,4 +1,4 @@
-name: Build_Test_API_CI_CD_Release
+name: Build_Test_API_CI_CD_Release 01
 
 env:
   DOTNET_VERSION: '6.0.x'   # set this to the .NET Core version to use
