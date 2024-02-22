@@ -59,4 +59,4 @@ jobs:
 
       - name: update function code directly
       # AWS lambda name - GLife_05
-        run: aws lambda update-function-code --function-name GLife_05_ --region eu-north-1 --zip-file fileb://publish.zip
+        run: aws lambda update-function-code --function-name GLife_05_QA --region eu-north-1 --zip-file fileb://publish.zip
